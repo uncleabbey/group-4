@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  padding: 1em;
+  color: #564500;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo > img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5em;
+}
+.form-container {
+  text-align: center;
+}
+.form-container  #add-btn {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: black;
+  background: gold;
+  padding: 1em 4em;
+  border: 0;
+  outline: 0;
+  box-shadow: 4px 4px black;
+}
+#add-item-form {
+  display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+#add-item-form form {
+  width: 400px;
+	margin: 5% auto;
+	border: 2px solid transparent;
+	padding: 4rem 2.5rem;
+	background: #fff;
+}
+#add-item-form form input {
+  width: 70%;
+	display: block;
+	border: 1px solid #050401;
+	border-radius:5px;
+	margin: 10px auto;
+	padding-left: 10px;
+  outline: none;
+  height: 30px;
+}
+#add-item-form form button {
+    margin: 10px auto;
+		color: #fff;
+		background: #564500;
+		padding: 10px 20px;
+		border: 0;
+}
+.display-data {
+  margin: 3em;
+}
+.display-data h2 {
+  text-align: center;
+  color: #564500;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:hover {
+  background-color: #f5f5f5
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2
+}
+
+.edit-btn {
+  padding: 10px;
+  background: #564500;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+.delete-btn {
+  color: white;
+  padding: 10px;
+  background: red;
+  border: 0;
+  outline: 0;
+}
+
+
+#edit-form {
+  width: 400px;
+	margin: 5% auto;
+	border: 2px solid black;
+  padding: 2rem 2.5rem;
+  text-align: center;
+}
+
+#edit-form input {
+  width: 70%;
+	display: block;
+	border: 1px solid #050401;
+	border-radius:5px;
+	margin: 10px auto;
+	padding-left: 10px;
+  outline: none;
+  height: 30px;
+}
+#edit-form button {
+    margin: 10px auto;
+		color: #fff;
+		background: #564500;
+		padding: 10px 20px;
+		border: 0;
+}
+
+.back {
+  margin-left: 3em;
+  text-decoration: none;
+  background: #000;
+  color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}

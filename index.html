@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Inventory Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.jfif" alt="logo">
+      <h1>Inventory Manager</h1>
+    </div>
+  </header>
+  <main>
+    <section class="form-container">
+      <button type="button" id="add-btn">Add Item to Store</button>
+      <div id="add-item-form">
+        <form id="add-form"> 
+          <h4>Add New Item to Inventory</h4>
+          <div class="form-group">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" name="itemName" required>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" required>
+          </div>
+          <div class="form-group">
+            <label for="itemName">Description</label>
+            <input type="text" id="description" name="description" required>
+          </div>
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </section>
+    <section class="display-data">
+      <h2>Items Available In Store</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Date Added</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
