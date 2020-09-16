@@ -68,17 +68,16 @@ class UI {
 
   displayItems () {
     const items = Store.getItems();
-    items.forEach((item, index) => UI.addItemToDOM(item, index))
+    items.forEach((item, index) => UI.addItemToDOM(item))
   }
   
   static addItemToDOM ({
     id, itemName, quantity, price, description, amount, date
-  }, index) {
+  }) {
     const tbody = document.querySelector("#tbody");
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${index + 1}</td>
       <td>${itemName}</td>
       <td>${description}</td>
       <td>${price}</td>
