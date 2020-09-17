@@ -147,3 +147,30 @@ tr:nth-child(even){
   padding: 10px;
   border-radius: 5px;
 }
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo > img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5em;
+}
+.form-container  #add-btn {
+  padding: 1em 2em;
+  box-shadow: 2px 2px black;
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display:inline-block;
+	
+  
+}
+}
+

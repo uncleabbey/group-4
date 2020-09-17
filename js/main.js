@@ -35,7 +35,7 @@ class Item {
     this.quantity = quantity;
     this.price = price;
     this.description = description;
-    this.amount = this.quantity * this.price;
+    this.amount =  this.quantity * this.price + ".00" + "NGN";
     this.date = new Date().toDateString();
   }
 }
@@ -68,17 +68,17 @@ class UI {
 
   displayItems () {
     const items = Store.getItems();
-    items.forEach((item, index) => UI.addItemToDOM(item, index))
+    items.forEach((item) => UI.addItemToDOM(item))
   }
   
   static addItemToDOM ({
     id, itemName, quantity, price, description, amount, date
-  }, index) {
+  }) {
     const tbody = document.querySelector("#tbody");
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${index + 1}</td>
+    
       <td>${itemName}</td>
       <td>${description}</td>
       <td>${price}</td>
