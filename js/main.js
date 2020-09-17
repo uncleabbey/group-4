@@ -35,7 +35,7 @@ class Item {
     this.quantity = quantity;
     this.price = price;
     this.description = description;
-    this.amount = this.quantity * this.price;
+    this.amount =  this.quantity * this.price + ".00" + "NGN";
     this.date = new Date().toDateString();
   }
 }
