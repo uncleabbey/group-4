@@ -43,7 +43,7 @@ editForm.addEventListener("submit", (event) => {
       item.quantity = data.quantity;
       item.price = data.price;
       item.description = data.description;
-      item.amount = Number(data.quantity) * Number(data.price)
+      item.amount = Number(data.quantity) * Number(data.price) + ".00" + "NGN";
     }
     return item
   });
