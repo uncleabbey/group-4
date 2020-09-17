@@ -149,6 +149,11 @@ tr:nth-child(even){
 }
 
 
+@media screen and (max-width: 600px) {
+  header {
+  padding: 0.5em;
+  font-size: 14px;
+}
 header .logo {
   display: flex;
   align-items: center;
@@ -163,14 +168,7 @@ header .logo > img {
   padding: 1em 2em;
   box-shadow: 2px 2px black;
 }
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display:inline-block;
-	
-  
+.display-data {
+  overflow-x: auto;
 }
 }
