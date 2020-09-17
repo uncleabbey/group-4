@@ -147,3 +147,27 @@ tr:nth-child(even){
   padding: 10px;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  header {
+  padding: 0.5em;
+  font-size: 14px;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo > img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5em;
+}
+.form-container  #add-btn {
+  padding: 1em 2em;
+  box-shadow: 2px 2px black;
+}
+.display-data {
+  overflow-x: auto;
+}
+}
