@@ -16,3 +16,13 @@ The system records the:
 -   The user should be able to modify an item in the store.
 -   The user should be able to delete an item in the store.
 -	  Persist all items to local storage
+The team members that contributed to the project:
+* Akintunde Alabi<br>
+Git username: tundealabi
+* Gabriel Kayode    <br> 
+ Git username: uncleabbey
+* Olamiji Badmos    <br>
+Git username: thebadmos
+* Sanni Rufai  <br>
+Git username: ruffysanni
+
