@@ -71,9 +71,9 @@ header .logo > img {
 		border: 0;
 }
 .display-data {
-  margin: 3em;
+  margin: 0 3em 3em 3em;
 }
-.display-data h2 {
+.table-title {
   text-align: center;
   color: #564500;
 }

@@ -68,7 +68,7 @@ class UI {
 
   displayItems () {
     const items = Store.getItems();
-    items.forEach((item, index) => UI.addItemToDOM(item))
+    items.forEach((item) => UI.addItemToDOM(item))
   }
   
   static addItemToDOM ({
@@ -108,7 +108,18 @@ class UI {
     if(el.classList.contains('delete')) {
       el.parentElement.remove()
     }
+    UI.displayAlert("success", "Item Deleted Successfully")
     Store.removeItem(id)
+  }
+  static displayAlert = (type, message) => { 
+        const formContainer = document.querySelector(".form-container");
+        const addItem = document.querySelector(".add-item-form");
+
+        const h5 = document.createElement("h5");
+        h5.className = `text-center alert alert-dismissables alert-${type}`;
+        h5.textContent = message;
+        formContainer.insertBefore(h5, addItem);
+        setTimeout(() => document.querySelector(".alert").remove(), 3000);
   }
 }
 
@@ -124,21 +135,30 @@ addForm.addEventListener("submit", (e) => {
   const quantity = Number(document.querySelector("#quantity").value);
   const price = Number(document.querySelector("#price").value);
   const description = document.querySelector("#description").value; 
+  if(itemName === "" || quantity === "" || price === "" || description === "") {
+    // close form container on submit
+    addFormContainer.style.display = 'none';
+
+    UI.displayAlert("danger", "Sorry.. All fields are required!!!!");
+  } else {
+    // get form object
+    const data = new Item(itemName, quantity, price, description);
   
-  // get form object
-  const data = new Item(itemName, quantity, price, description);
-
-  // add data to dom
-  UI.addItemToDOM(data);
-
-  // add data to store
-  Store.addItemsToStore(data)
-
-  // clear form 
-  UI.clearForm();
-
-  // close form container on submit
-  addFormContainer.style.display = 'none';
+    // add data to dom
+    UI.addItemToDOM(data);
+  
+    // add data to store
+    Store.addItemsToStore(data)
+  
+    // clear form 
+    UI.clearForm();
+  
+    // close form container on submit
+    addFormContainer.style.display = 'none';
+  
+    // display alert
+    UI.displayAlert("success", "Item Added Succesfully");
+  }
 })
 
 
